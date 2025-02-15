@@ -1,12 +1,16 @@
 Empty World erstell programm	//done
 
-Validate world
-Versionsnummer automatisch
+Validate world					//done
+Versionsnummer automatisch		//done
 
 
-File Manager
+File Manager					//started
 
 Ordnerstrukturen überlegen
+//	alles was nur 1 mal exestiert kommt in den oberordner als json datai mit benötigtem inhalt.
+//	alles was in mehreren dateien(z.b. recources) aufgespaltet wird hat einen ordner in dem sich die dateien befinden und eine datei in Overviews mit dem namen des ordner, in dem alle inhalte zu ihrem pfad zugeordnet werden.
+
+
 
 Interface
 
