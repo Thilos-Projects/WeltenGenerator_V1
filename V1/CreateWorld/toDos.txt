@@ -7,10 +7,10 @@ prüfen ob datei da ist					done tested
 inhalt datei schreiben					done tested
 inhalt datei lesen						done tested
 
-erstelle datei für alle rohstoffe die bekannt sind.
-struktur für 1 rohstoff erstellen
-speicher für alle rohstoffe erstellen
-fülle datei mit demo werten
+erstelle datei für alle rohstoffe die bekannt sind.		done tested
+struktur für 1 rohstoff erstellen						done tested
+speicher für alle rohstoffe erstellen					done tested
+fülle datei mit demo werten								done tested
 
 
 

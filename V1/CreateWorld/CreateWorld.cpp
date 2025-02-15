@@ -47,7 +47,30 @@ void funcTestFileWriter() {
 	std::cout << File_Manager::fileExists("HI", "test.txt") << std::endl;
 }
 
-struct Recource :public Jasonable {
+struct Version : public Jasonable {
+	std::string Recourcen;
+	std::string RecourcenOverview;
+
+
+	virtual bool fillFromJson(nlohmann::json data) {
+		if (!data.contains("Recourcen"))
+			return false;
+		if (!data.contains("RecourcenOverview"))
+			return false;
+
+		Recourcen = data["Recourcen"];
+		RecourcenOverview = data["RecourcenOverview"];
+		return true;
+	}
+	virtual nlohmann::json toJson() {
+		nlohmann::json toRet;
+		toRet["Recourcen"] = Recourcen;
+		toRet["RecourcenOverview"] = RecourcenOverview;
+		return toRet;
+	}
+};
+
+struct Recource : public Jasonable {
 	std::string name;
 
 
@@ -74,6 +97,22 @@ uint8_t main(int argc, char* argv[]) {
 	File_Manager::setWorldPath(worldPath);
 
 	Recource temp; std::ofstream writer; nlohmann::json toWrite;
+
+	Version v;
+	v.Recourcen = "V0001";
+	v.RecourcenOverview = "V0001";
+	File_Manager::createFile("", "Version.json");
+	writer = File_Manager::writeFile("", "Version.json");
+	if (!writer.is_open()) {
+		std::cout << "Fehler beim beschreiben der datei" << std::endl;
+		return -1;
+	}
+	toWrite = v.toJson();
+	writer << toWrite.dump(1);
+	writer.close();
+
+
+
 
 	temp.name = "Demo";
 	File_Manager::createFile("Recources", temp.name + ".json");
