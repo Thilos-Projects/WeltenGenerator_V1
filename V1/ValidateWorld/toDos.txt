@@ -1,0 +1,40 @@
+Empty World erstell programm
+
+erstellen einen ordner					done tested
+erstellen eine datei					done tested
+prüfen ob ordner da ist					done tested
+prüfen ob datei da ist					done tested
+inhalt datei schreiben					done tested
+inhalt datei lesen						done tested
+
+erstelle datei für alle rohstoffe die bekannt sind.		done tested
+struktur für 1 rohstoff erstellen						done tested
+speicher für alle rohstoffe erstellen					done tested
+fülle datei mit demo werten								done tested
+
+
+
+//alles kann bearbeited werden, aber nichts muss
+
+//globale technologien(hat und kennt jeder)
+//map design
+//	karte grundlegend
+//		nicht in häuser notwendig
+//		wo ist welche stadt, wie viele häuser wo sind die, welche interresanten gebäude?
+//	wo ist welche technologie verfügbar
+//	wo welche rohstoffe
+//npc
+	// haus
+	// beruf
+	// familie
+	// rasse
+	// wissen(technologie)
+//tiere
+	// lebensraum
+	// heufigkeit
+	// rasse
+//pflanzen
+	// lebensraum
+	// heufigkeit
+	// rasse
+//
