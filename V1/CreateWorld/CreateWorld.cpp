@@ -11,8 +11,13 @@ uint8_t main(int argc, char* argv[]) {
 	
 	if (argc > 1)
 		worldPath = argv[1];
-
 	File_Manager::setWorldPath(worldPath);
+
+	File_Manager::createFile("Overviews", "Recources.json");
+
+
+
+	/* File_Manager::setWorldPath(worldPath);
 	std::cout << File_Manager::createFolder("HI") << std::endl;
 	std::cout << File_Manager::createFolder("HI") << std::endl;
 	std::cout << File_Manager::folderExists("HI") << std::endl;
@@ -48,9 +53,8 @@ uint8_t main(int argc, char* argv[]) {
 	File_Manager::removeFolder("HI");
 	std::cout << File_Manager::folderExists("HI") << std::endl;
 	std::cout << File_Manager::fileExists("HI", "test.txt") << std::endl;
-
-	//uint8_t temp;
-	//std::cin >> temp;
+	uint8_t temp;
+	std::cin >> temp;*/
 
 	return 0;
 }

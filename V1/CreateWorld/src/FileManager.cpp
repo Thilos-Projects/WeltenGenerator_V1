@@ -16,7 +16,7 @@ namespace File_Manager {
 
 	bool folderExists(std::string path) {
 		return pathExists(path);
->>>>>>>>> Temporary merge branch 2
+
 	}
 	bool createFolder(std::string path) {
 		return fs::create_directories(worldPath + path);
