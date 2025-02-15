@@ -2,7 +2,7 @@ Empty World erstell programm
 
 erstellen einen ordner					done
 
-erstellen eine datei
+erstellen eine datei					done
 
 prüfen ob ordner da ist					done
 
