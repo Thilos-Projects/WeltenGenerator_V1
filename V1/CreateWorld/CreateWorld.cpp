@@ -15,8 +15,8 @@ uint8_t main(int argc, char* argv[]) {
 	File_Manager::setWorldPath(worldPath);
 	File_Manager::createFolder("HI");
 
-	uint8_t temp;
-	std::cin >> temp;
+	//uint8_t temp;
+	//std::cin >> temp;
 
 	return 0;
 }
