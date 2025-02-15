@@ -12,11 +12,23 @@ namespace File_Manager {
 	}
 
 	void removePath(std::string path) {
-		fs::remove(worldPath + path);
+			fs::remove(worldPath + path);
 	}
 
-	bool pathExists(std::string worldPath){
-		//if(worldPath)
+	bool pathExists(std::string path) {
+		return fs::exists(worldPath + path);
+	}
+
+	bool pathExists(std::string path) {
+		return fs::exists(worldPath + path);
+	}
+
+	bool fileExists(std::string path) {
+		return pathExists(path);
+	}
+
+	bool folderExists(std::string path) {
+		return pathExists(path);
 	}
 
 	
