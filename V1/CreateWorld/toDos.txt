@@ -1,17 +1,16 @@
 Empty World erstell programm
 
 erstellen einen ordner					done tested
-
 erstellen eine datei					done tested
-
 prüfen ob ordner da ist					done tested
-
 prüfen ob datei da ist					done tested
-
 inhalt datei schreiben					done tested
 inhalt datei lesen						done tested
 
-
+erstelle datei für alle rohstoffe die bekannt sind.
+struktur für 1 rohstoff erstellen
+speicher für alle rohstoffe erstellen
+fülle datei mit demo werten
 
 
 

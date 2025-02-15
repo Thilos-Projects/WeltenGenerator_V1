@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FileManager.h" />
+    <ClInclude Include="src\Jasonable.h" />
     <ClInclude Include="src\json.hpp" />
   </ItemGroup>
   <ItemGroup>

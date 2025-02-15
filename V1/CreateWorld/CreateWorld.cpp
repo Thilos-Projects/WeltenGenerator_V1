@@ -5,14 +5,11 @@
 #include "src/json.hpp"
 #include "src/FileManager.h"
 
+#include "src/Jasonable.h"
+
 std::string worldPath = "data/World1";
 
-uint8_t main(int argc, char* argv[]) {
-	
-	if (argc > 1)
-		worldPath = argv[1];
-
-	File_Manager::setWorldPath(worldPath);
+void funcTestFileWriter() {
 	std::cout << File_Manager::createFolder("HI") << std::endl;
 	std::cout << File_Manager::createFolder("HI") << std::endl;
 	std::cout << File_Manager::folderExists("HI") << std::endl;
@@ -48,9 +45,58 @@ uint8_t main(int argc, char* argv[]) {
 	File_Manager::removeFolder("HI");
 	std::cout << File_Manager::folderExists("HI") << std::endl;
 	std::cout << File_Manager::fileExists("HI", "test.txt") << std::endl;
+}
 
-	//uint8_t temp;
-	//std::cin >> temp;
+struct Recource :public Jasonable {
+	std::string name;
+
+
+	virtual bool fillFromJson(nlohmann::json data) {
+		if (!data.contains("name"))
+			return false;
+
+		name = data["name"];
+		return true;
+	}
+	virtual nlohmann::json toJson() {
+		nlohmann::json toRet;
+		toRet["name"] = name;
+		return toRet;
+	}
+};
+
+std::map<std::string, std::string> recourcesOverview;
+
+uint8_t main(int argc, char* argv[]) {
+	
+	if (argc > 1)
+		worldPath = argv[1];
+	File_Manager::setWorldPath(worldPath);
+
+	Recource temp; std::ofstream writer; nlohmann::json toWrite;
+
+	temp.name = "Demo";
+	File_Manager::createFile("Recources", temp.name + ".json");
+	writer = File_Manager::writeFile("Recources", temp.name + ".json");
+	if (!writer.is_open()) {
+		std::cout << "Fehler beim beschreiben der datei" << std::endl;
+		return -1;
+	}
+	toWrite = temp.toJson();
+	writer << toWrite.dump(1);
+	writer.close();
+	recourcesOverview.insert(std::make_pair(temp.name, "Recources/" + temp.name + ".json"));
+	
+
+	File_Manager::createFile("Overviews", "Recources.json");
+	writer = File_Manager::writeFile("Overviews", "Recources.json");
+	if (!writer.is_open()) {
+		std::cout << "Fehler beim beschreiben der datei" << std::endl;
+		return -1;
+	}
+	toWrite = recourcesOverview;
+	writer << toWrite.dump(1);
+	writer.close();
 
 	return 0;
 }
