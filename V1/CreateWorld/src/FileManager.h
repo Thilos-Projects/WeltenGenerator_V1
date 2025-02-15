@@ -20,4 +20,7 @@ namespace File_Manager {
 	bool createFile(std::string parrentFolder, std::string name);
 	void removeFile(std::string parrentFolder, std::string name);
 	bool fileExists(std::string parrentFolder, std::string name);
+
+	std::ifstream readFile(std::string parrentFolder, std::string name);
+	std::ofstream writeFile(std::string parrentFolder, std::string name);
 }

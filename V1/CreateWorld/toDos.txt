@@ -1,15 +1,15 @@
 Empty World erstell programm
 
-erstellen einen ordner					done
+erstellen einen ordner					done tested
 
-erstellen eine datei					done
+erstellen eine datei					done tested
 
-prüfen ob ordner da ist					done
+prüfen ob ordner da ist					done tested
 
-prüfen ob datei da ist					done
+prüfen ob datei da ist					done tested
 
-inhalt datei schreiben
-inhalt datei lesen
+inhalt datei schreiben					done tested
+inhalt datei lesen						done tested
 
 
 

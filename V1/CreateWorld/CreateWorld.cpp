@@ -33,6 +33,22 @@ uint8_t main(int argc, char* argv[]) {
 	std::cout << File_Manager::folderExists("HI") << std::endl;
 	std::cout << File_Manager::fileExists("HI", "test.txt") << std::endl;
 
+	std::cout << File_Manager::createFile("HI", "test.txt") << std::endl;
+	std::ofstream writer = File_Manager::writeFile("HI", "test.txt");
+	writer << "Huhu" << std::endl;
+	writer.close();
+	std::ifstream reader = File_Manager::readFile("HI", "test.txt");
+	std::string temp;
+	reader >> temp;
+	std::cout << temp << std::endl;
+	reader.close();
+	File_Manager::removeFile("HI", "test.txt");
+	std::cout << File_Manager::folderExists("HI") << std::endl;
+	std::cout << File_Manager::fileExists("HI", "test.txt") << std::endl;
+	File_Manager::removeFolder("HI");
+	std::cout << File_Manager::folderExists("HI") << std::endl;
+	std::cout << File_Manager::fileExists("HI", "test.txt") << std::endl;
+
 	//uint8_t temp;
 	//std::cin >> temp;
 

@@ -41,4 +41,10 @@ namespace File_Manager {
 		return pathExists(parrentFolder + "/" + name);
 	}
 
+	std::ifstream readFile(std::string parrentFolder, std::string name) {
+		return std::ifstream(worldPath + "/" + parrentFolder + "/" + name);
+	}
+	std::ofstream writeFile(std::string parrentFolder, std::string name) {
+		return std::ofstream(worldPath + "/" + parrentFolder + "/" + name);
+	}
 }
