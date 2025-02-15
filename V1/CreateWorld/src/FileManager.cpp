@@ -11,15 +11,23 @@ namespace File_Manager {
 		worldPath = path + "/";
 	}
 
-	void createFolder(std::string path) {
-		fs::create_directory(worldPath+path)
-			? std::cout << "created directory - " << path << std::endl
-			: std::cout << "create_directory() failed" << std::endl;
+	bool pathExists(std::string worldPath){
+		if(worldPath)
+	}
 
+	
+	bool createFolder(std::string path) {
+		return fs::create_directories(worldPath + path);
 	}
 	void removeFolder(std::string path) {
 
 		fs::remove(worldPath+path);
+	}
+
+	void createFile(std::string parrentFolder, std::string name) {
+		createFolder(parrentFolder);
+		std::ofstream ofs(worldPath + parrentFolder + "/" + name);
+		ofs.close();
 	}
 
 }
