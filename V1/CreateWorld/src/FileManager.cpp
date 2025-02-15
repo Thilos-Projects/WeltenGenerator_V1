@@ -11,8 +11,12 @@ namespace File_Manager {
 		worldPath = path + "/";
 	}
 
+	void removePath(std::string path) {
+		fs::remove(worldPath + path);
+	}
+
 	bool pathExists(std::string worldPath){
-		if(worldPath)
+		//if(worldPath)
 	}
 
 	
@@ -20,14 +24,16 @@ namespace File_Manager {
 		return fs::create_directories(worldPath + path);
 	}
 	void removeFolder(std::string path) {
-
-		fs::remove(worldPath+path);
+		removePath(path);
 	}
 
 	void createFile(std::string parrentFolder, std::string name) {
 		createFolder(parrentFolder);
 		std::ofstream ofs(worldPath + parrentFolder + "/" + name);
 		ofs.close();
+	}
+	void removeFile(std::string parrentFolder, std::string name) {
+		removePath(parrentFolder + "/" + name);
 	}
 
 }
