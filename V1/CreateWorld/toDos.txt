@@ -4,9 +4,9 @@ erstellen einen ordner					done
 
 erstellen eine datei
 
-prüfen ob ordner da ist
+prüfen ob ordner da ist					done
 
-prüfen ob datei da ist
+prüfen ob datei da ist					done
 
 inhalt datei schreiben
 inhalt datei lesen
